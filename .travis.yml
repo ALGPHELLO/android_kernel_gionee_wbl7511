@@ -50,7 +50,3 @@ deploy:
     tags: true
     repo: ALGPHELLO/android_kernel_gionee_wbl7511
     branch: master
-
-branches:
-  except:
-- /^(?i:untagged)-.*$/
