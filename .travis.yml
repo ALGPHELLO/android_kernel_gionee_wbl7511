@@ -28,6 +28,8 @@ script:
   
   - export ARCH=arm64
   - export ARCH_MTK_PLATFORM=mt6753
+  - export KBUILD_BUILD_USER="ALGPHELLO"
+  - export KBUILD_BUILD_HOST="fujitsu"
   - export CROSS_COMPILE=~/aarch64-linux-android-4.9/bin/aarch64-linux-android-  
   - mkdir -p out
   - make O=out clean
@@ -39,7 +41,7 @@ script:
 
 after_success:
   - cd $KERNEL_DIR/out
-  - curl --upload-file arch/arm64/boot/*Image* https://transfer.sh/kernel
+  - curl --upload-file arch/arm64/boot/*Image* https://transfer.sh/Gionee_S_Plus_Kernel
   
 deploy:
   skip_cleanup: true
