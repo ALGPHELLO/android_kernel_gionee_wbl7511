@@ -38,7 +38,7 @@ script:
   - ZIMAGE=$KERNEL_DIR/arch/arm64/boot/*Image*
 
 after_success:
-  - cd $KERNEL_DIR
+  - cd $KERNEL_DIR/out
   - curl --upload-file arch/arm64/boot/*Image* https://transfer.sh/kernel
   
 deploy:
